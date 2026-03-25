@@ -14,23 +14,23 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 public class DemoApplication {
 
     @GetMapping("contato")
+    public String ChamarUsuario() {
+        return "Chamado com sucesso";
+    }
+
+    @PostMapping("contato")
     public String CriarUsuario() {
         return "Criado com sucesso";
     }
 
-    @PostMapping("contato")
+    @PutMapping("contato")
     public String AtualizarUsuario() {
         return "Atualizado com sucesso";
     }
 
-    @PutMapping("contato")
-    public String PuxarrUsuario() {
-        return "Sucesso";
-    }
-
     @DeleteMapping("contato")
     public String DeletarUsuario() {
-        return "Sucesso";
+        return "Deletado com Sucesso";
     }
 
 
